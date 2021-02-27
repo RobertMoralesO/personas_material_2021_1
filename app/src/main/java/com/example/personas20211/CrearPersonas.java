@@ -108,6 +108,13 @@ public class CrearPersonas extends AppCompatActivity {
 		return true;
 
 	}
+
+	public void onBackPressed(){
+		finish();
+		Intent i = new Intent(CrearPersonas.this, MainActivity.class);
+		startActivity(i);
+	}
+
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);

@@ -5,17 +5,33 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
 
+public class MainActivity extends AppCompatActivity {
+	private RecyclerView lista;
+	private AdaptadorPersona adapter;
+	private LinearLayoutManager llm;
+	private ArrayList<Persona> personas;
+	private DatabaseReference databaseReference;
+	private String bd = "Personas";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +40,37 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
+        lista = findViewById(R.id.lstPersonas);
 
-    }
+		personas = new ArrayList<>();
+		llm = new LinearLayoutManager(this);
+		adapter = new AdaptadorPersona(personas);
+		llm.setOrientation(RecyclerView.VERTICAL);
+
+		lista.setLayoutManager(llm);
+		lista.setAdapter(adapter);
+
+		databaseReference = FirebaseDatabase.getInstance().getReference();
+		databaseReference.child(bd).addValueEventListener(new ValueEventListener() {
+			@Override
+			public void onDataChange(@NonNull DataSnapshot snapshot) {
+				personas.clear();
+				if(snapshot.exists()){
+					for(DataSnapshot snap: snapshot.getChildren()){
+						Persona p = snap.getValue(Persona.class);
+						personas.add(p);
+					}
+				}
+				adapter.notifyDataSetChanged();
+				Datos.setPersonas(personas);
+			}
+
+			@Override
+			public void onCancelled(@NonNull DatabaseError error) {
+
+			}
+		});
+	}
 
     public void crear(View v){
     	Intent intent;
