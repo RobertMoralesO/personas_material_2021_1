@@ -1,15 +1,7 @@
 <resources>
 	<string name="app_name">Personas20211</string>
-	<string name="action_settings">Settings</string>
 	<!-- Strings used for fragments for navigation -->
-	<string name="first_fragment_label">First Fragment</string>
-	<string name="second_fragment_label">Second Fragment</string>
-	<string name="next">Next</string>
-	<string name="previous">Previous</string>
-
-	<string name="hello_first_fragment">Hello first fragment</string>
-	<string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-	<string name="titulo_crear">CREAR PERSONAS</string>
+	<string name="titulo_crear">CREAR PERSONA</string>
 	<string name="cedula">Cédula</string>
 	<string name="nombre">Nombre</string>
 	<string name="apellido">Apellido</string>
@@ -22,4 +14,9 @@
 	<string name="error_ingreso_cedula">Digite la cédula</string>
 	<string name="error_ingreso_apellido">Digite el Apellido</string>
 	<string name="error_ingreso_nombre">Digite el Nombre</string>
+	<string name="mensaje_eliminar">Eliminar Persona</string>
+	<string name="pregunta_eliminar_persona">¿Está seguro que desea eliminar a esta persona?</string>
+	<string name="mensaje_si">Si</string>
+	<string name="mensaje_no">No</string>
+	<string name="action_settings" translatable="false">Settings</string>
 </resources>

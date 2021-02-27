@@ -24,7 +24,7 @@ public class Datos {
 	}
 	public static void eliminar(Persona p){
 		databaseReference.child(bd).child(p.getId()).removeValue();
-		storageReference.child(bd).child(p.getId()).delete();
+		storageReference.child(p.getId()).delete();
 	}
 
 	public static void setPersonas(ArrayList<Persona> personas){

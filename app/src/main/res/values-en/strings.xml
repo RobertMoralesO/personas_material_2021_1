@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Personas20211</string>
+	<string name="titulo_crear">CREATE PERSON</string>
+	<string name="cedula">Id</string>
+	<string name="nombre">Name</string>
+	<string name="apellido">Lastname</string>
+	<string name="guardar">Save</string>
+	<string name="limpiar">Clear</string>
+	<string name="eliminar">Delete</string>
+	<string name="titulo_detalle">PERSON DETAILS</string>
+	<string name="mensaje_guardado_exitoso">Person saves successfully!</string>
+	<string name="mensaje_seleccion_foto">Choose Picture</string>
+	<string name="error_ingreso_cedula">Type Id</string>
+	<string name="error_ingreso_apellido">Type Lastname</string>
+	<string name="error_ingreso_nombre">Type Name</string>
+	<string name="mensaje_eliminar">Delete Person</string>
+	<string name="pregunta_eliminar_persona">¿Are you sure to delete this person?</string>
+	<string name="mensaje_si">Yes</string>
+	<string name="mensaje_no">No</string>
+</resources>
