@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:fab="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".DetallePersona">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/lblTituloDetalle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/titulo_detalle"
+			android:textAlignment="center"
+			android:textSize="24sp"
+			android:textStyle="bold" />
+
+		<ImageView
+			android:id="@+id/imgFotoDetalle"
+			android:layout_width="229dp"
+			android:layout_height="189dp"
+			android:layout_gravity="center_horizontal"
+			fab:srcCompat="@android:drawable/ic_menu_gallery" />
+
+		<TableLayout
+			android:id="@+id/tblTablaDetalle"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginTop="20sp"
+			android:stretchColumns="*">
+
+			<TableRow
+				android:id="@+id/filaCedula"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<TextView
+					android:id="@+id/lblTituloCedula"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:text="@string/cedula"
+					android:textSize="18sp"
+					android:textStyle="bold" />
+
+				<TextView
+					android:id="@+id/lblCedulaDetalle"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:text="TextView"
+					android:textSize="18sp"
+					android:textStyle="bold" />
+			</TableRow>
+
+			<TableRow
+				android:id="@+id/filaNombre"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<TextView
+					android:id="@+id/lblTituloNombre"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:text="@string/nombre"
+					android:textSize="18sp"
+					android:textStyle="bold" />
+
+				<TextView
+					android:id="@+id/lblNombreDetalle"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:text="TextView"
+					android:textSize="18sp"
+					android:textStyle="bold" />
+			</TableRow>
+
+			<TableRow
+				android:id="@+id/filaApellido"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<TextView
+					android:id="@+id/lblTituloApellido"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:text="@string/apellido"
+					android:textSize="18sp"
+					android:textStyle="bold" />
+
+				<TextView
+					android:id="@+id/lblApellidoDetalle"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:text="TextView"
+					android:textSize="18sp"
+					android:textStyle="bold" />
+			</TableRow>
+
+		</TableLayout>
+	</LinearLayout>
+
+	<com.github.clans.fab.FloatingActionMenu
+		android:id="@+id/menuFab"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|end"
+		fab:menu_fab_size="normal"
+		fab:menu_showShadow="true"
+		fab:menu_shadowColor="#66000000"
+		fab:menu_shadowRadius="4dp"
+		fab:menu_shadowXOffset="1dp"
+		fab:menu_shadowYOffset="3dp"
+		fab:menu_colorNormal="@color/accent"
+		fab:menu_colorPressed="@color/accent"
+		fab:menu_colorRipple="#99FFFFFF"
+		fab:menu_animationDelayPerItem="50"
+		fab:menu_icon="@drawable/fab_add"
+		fab:menu_buttonSpacing="0dp"
+		fab:menu_labels_margin="0dp"
+		fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+		fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+		fab:menu_openDirection="up"
+		fab:menu_backgroundColor="@android:color/transparent">
+
+		<com.github.clans.fab.FloatingActionButton
+			android:id="@+id/menu_eliminar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@android:drawable/ic_menu_delete"
+			fab:fab_label="@string/eliminar"
+			fab:fab_size="mini" />
+
+	</com.github.clans.fab.FloatingActionMenu>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
