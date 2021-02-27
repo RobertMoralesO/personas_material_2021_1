@@ -17,4 +17,9 @@
 	<string name="limpiar">Limpiar</string>
 	<string name="eliminar">Eliminar</string>
 	<string name="titulo_detalle">DETALLE PERSONA</string>
+	<string name="mensaje_guardado_exitoso">Persona guardada exitosamente!</string>
+	<string name="mensaje_seleccion_foto">Seleccione la foto</string>
+	<string name="error_ingreso_cedula">Digite la cédula</string>
+	<string name="error_ingreso_apellido">Digite el Apellido</string>
+	<string name="error_ingreso_nombre">Digite el Nombre</string>
 </resources>

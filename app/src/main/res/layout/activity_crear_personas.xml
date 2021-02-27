@@ -21,6 +21,7 @@
 		android:layout_width="222dp"
 		android:layout_height="165dp"
 		android:layout_gravity="center_horizontal"
+		android:onClick="seleccionarFoto"
 		app:srcCompat="@android:drawable/ic_menu_gallery" />
 
 	<EditText
@@ -28,24 +29,24 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:ems="10"
-		android:inputType="textPersonName"
-		android:text="@string/cedula" />
+		android:hint="@string/cedula"
+		android:inputType="number" />
 
 	<EditText
 		android:id="@+id/txtNombre"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:ems="10"
-		android:inputType="textPersonName"
-		android:text="@string/nombre" />
+		android:hint="@string/nombre"
+		android:inputType="textPersonName" />
 
 	<EditText
 		android:id="@+id/txtApellido"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:ems="10"
-		android:inputType="textPersonName"
-		android:text="@string/apellido" />
+		android:hint="@string/apellido"
+		android:inputType="textPersonName" />
 
 	<LinearLayout
 		android:layout_width="match_parent"
@@ -58,6 +59,7 @@
 			android:layout_height="wrap_content"
 			android:layout_marginRight="5sp"
 			android:layout_weight="1"
+			android:onClick="guardar"
 			android:text="@string/guardar" />
 
 		<Button
@@ -65,6 +67,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
+			android:onClick="limpiar"
 			android:text="@string/limpiar" />
 	</LinearLayout>
 </LinearLayout>
